@@ -4213,6 +4213,8 @@ def render_roster_list(show_remove: bool = False):
                 except Exception:
                     quality = 0
 
+            player_profile = p.get("PlayerProfile", "Depth Contributor")
+
             st.markdown(
                 f"""
                 <div class="player-row-card">
