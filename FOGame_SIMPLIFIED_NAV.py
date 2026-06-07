@@ -1145,7 +1145,6 @@ PRESET_ROSTERS = {
         ('Two-Way 1', 'Nikola Jovic'),
         ('Two-Way 2', 'Keshad Johnson'),
         ('Bench 7', 'Myron Gardner'),
-        ('Bench 8', 'Jahmir Young'),
     ],
     'Milwaukee': [
         ('Starting PG', 'Ryan Rollins'),
