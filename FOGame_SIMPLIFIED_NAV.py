@@ -16,7 +16,7 @@ except ImportError:
 # CONFIG
 # ============================================================
 
-DATA_PATH = "Clean NBA Data Full API Sorted.csv"
+DATA_PATH = "Clean NBA Data Full API With Profiles.csv"
 FALLBACK_DATA_PATH = "Clean NBA Data.csv"
 LOGO_PATH = "baileybi_logo.png"
 
