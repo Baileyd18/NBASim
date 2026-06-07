@@ -3446,30 +3446,31 @@ with setup_tab:
     index=0
 )
 
-    p1, p2 = st.columns([1, 1])
-    with p1:
-        if st.button("Load Preset", type="primary", use_container_width=True):
+p1, p2 = st.columns([1, 1])
 
-    if preset_choice == "New Team":
-        st.session_state.roster = {}
-        st.success("Started a new team.")
+with p1:
+    if st.button("Load Preset", type="primary", use_container_width=True):
 
-    else:
-        loaded, missing = load_preset_roster(
-            preset_choice,
-            st.session_state.roster_size,
-            df
-        )
+        if preset_choice == "New Team":
+            st.session_state.roster = {}
+            st.success("Started a new team.")
 
-        st.session_state.roster = loaded
-
-        if missing:
-            st.warning(
-                "Preset loaded, but these players were not found: "
-                + ", ".join(missing)
-            )
         else:
-            st.success(f"{preset_choice} loaded successfully.")
+            loaded, missing = load_preset_roster(
+                preset_choice,
+                st.session_state.roster_size,
+                df
+            )
+
+            st.session_state.roster = loaded
+
+            if missing:
+                st.warning(
+                    "Preset loaded, but these players were not found: "
+                    + ", ".join(missing)
+                )
+            else:
+                st.success(f"{preset_choice} loaded successfully.")
 
     with p2:
         if st.button("Clear Roster", type="secondary", use_container_width=True):
