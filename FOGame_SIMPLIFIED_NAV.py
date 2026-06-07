@@ -3962,14 +3962,14 @@ def render_topbar():
             new_roster_size = st.selectbox(
                 "Roster Size",
                 list(range(9, 16)),
-                index=list(range(9, 16)).index(st.session_state.roster_size),
+                index=list(range(9, 16)).index_size),
                 key="top_menu_roster_size"
             )
 
             if new_roster_size != st.session_state.roster_size:
                 st.session_state.roster_size = new_roster_size
                 allowed_slots = ROSTER_SLOTS[:new_roster_size]
-                for slot in list(st.session_state.roster.keys()):
+                for slot in list.keys()):
                     if slot not in allowed_slots:
                         del st.session_state.roster[slot]
                 st.session_state.reports = {}
@@ -4241,7 +4241,7 @@ with tab_build:
     left_title, right_title = st.columns([1, 1])
     with left_title:
         st.markdown(
-            f'<div class="section-heading-mobile">Roster ({len(st.session_state.roster)}/{st.session_state.roster_size})</div>',
+            f'<div class="section-heading-mobile">Roster ({len(st.session_state.roster)}/15 MAX)</div>',
             unsafe_allow_html=True
         )
     with right_title:
