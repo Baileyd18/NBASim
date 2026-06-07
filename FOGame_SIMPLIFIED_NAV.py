@@ -4223,7 +4223,7 @@ def render_roster_list(show_remove: bool = False):
                         <div class="player-role-mobile">{compact_role(p)}</div>
                     </div>
                     <div class="player-right-mobile">
-                        <div class="player-ovr-mobile">OVR {float(quality):.0f}</div>
+                        
                         <div class="player-salary-mobile">{money(p['Salary'])}</div>
                     </div>
                     <div class="chev-mobile">›</div>
