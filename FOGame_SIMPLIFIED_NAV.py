@@ -4372,7 +4372,7 @@ with tab_analysis:
     st.markdown('<div class="section-heading-mobile">Team Analysis</div>', unsafe_allow_html=True)
 
     if metrics_now is None:
-        st.warning(f"Draft at least {MIN_RESULTS_PLAYERS} players to unlock analysis. Current roster: {len(st.session_state.roster)}/{st.session_state.roster_size}.")
+        st.warning(f"Draft at least {MIN_RESULTS_PLAYERS} players to unlock analysis. Current roster: {len(st.session_state.roster)}/15 MAX.")
     else:
         a, b, c = st.columns(3)
         with a:
