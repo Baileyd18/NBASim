@@ -3067,7 +3067,7 @@ def generate_ai_report(team_summary: dict) -> str:
     AI report generation with real autonomy.
 
     The app provides:
-    - full 13-man roster
+    - full NBA roster
     - selected role slots
     - clean player stats
     - team result metrics
